@@ -1,1 +1,1 @@
-correcion de errores y agregacion de estilos
+correcion de errores y aplicacion de estilos
