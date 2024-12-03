@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .nav .Logo img {
+    width: 150px;
+}
+
+header .nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav .menu li a img {
+    width: 20px;
+}
+
+.pedido-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pedido-form h1, .pedido-form h2 {
+    text-align: center;
+}
+
+.pedido-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.pedido-form input[type="text"],
+.pedido-form input[type="file"],
+.pedido-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pedido-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pedido-form button:hover {
+    background-color: #555;
+}
+
+.pedidos-lista {
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pedidos-lista h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pedidos-lista table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pedidos-lista table th, .pedidos-lista table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.pedidos-lista table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.pedidos-lista table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pedidos-lista table img {
+    width: 50px;
+    height: auto;
+}
+
+.pedidos-lista button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pedidos-lista button:hover {
+    background-color: #555;
+}
+
+
+

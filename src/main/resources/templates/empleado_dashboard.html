@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Panel de Empleado</title>
+</head>
+<body>
+    <h1>Bienvenido Empleado, <span th:text="${usuario.nombre}"></span>!</h1>
+    
+    <h2>Listado de Usuarios</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${usuarios}">
+                <td th:text="${user.nombre}"></td>
+                <td th:text="${user.correo}"></td>
+                <td th:text="${user.rol}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

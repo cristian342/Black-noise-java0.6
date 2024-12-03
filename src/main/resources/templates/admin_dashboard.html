@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Panel de Administrador</title>
+</head>
+<body>
+    <h1>Bienvenido Administrador, <span th:text="${usuario.nombre}"></span>!</h1>
+    
+    <h2>Listado de Usuarios</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${usuarios}">
+                <td th:text="${user.nombre}"></td>
+                <td th:text="${user.correo}"></td>
+                <td th:text="${user.rol}"></td>
+                <td>
+                    <form th:action="@{/usuario/{idAdmin}/editar/{idEditado}(idAdmin=${usuario.id}, idEditado=${user.id})}" method="post">                   
+                          <input type="hidden" th:value="${user.id}" name="id">
+                          <input type="text" name="nombre" th:value="${user.nombre}">
+                          <input type="email" name="correo" th:value="${user.correo}">
+                          <button type="submit">Editar</button>
+                    </form>
+                    
+                    <form th:action="@{/usuario/{idAdmin}/eliminar/{idEditado}(idAdmin=${usuario.id}, idEditado=${user.id})}" method="post">
+                         <button type="submit">Eliminar</button>
+                    </form>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Pedidos de Moda</title>
+    <link rel="stylesheet" href="../2. CSS_S/Registro de diseños.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="Logo">
+                <a href="#">
+                    <img src="../IMG/Logos/black noise (LOGO).png" alt="LOGO">
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="../1. HTMLS/3. Inicio de sesion.html"><img src="../ICONS/icono persona.svg" alt="Registro" style="width: 20px"></a></li>
+                <li><a href="../1. HTMLS/5. Carrito.html"><img src="../ICONS/Carrito.svg" alt="Carrito" style="width: 20px"></a></li>
+                <li><a onclick="call_error_404()"><img src="../ICONS/icono-lupa.svg" alt="Busqueda" style="width: 20px"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="pedido-form">
+        <h1>Administración de Pedidos</h1>
+        <h2>Gestión de Pedidos</h2>
+        <form id="pedidoForm">
+            <label for="pedidoId">ID del Pedido:</label>
+            <input type="text" id="pedidoId" required>
+            <label for="prenda">Prenda:</label>
+            <input type="text" id="prenda" required>
+            <label for="estado">Estado:</label>
+            <select id="estado" required>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En Proceso">En Proceso</option>
+                <option value="Enviado">Enviado</option>
+                <option value="Entregado">Entregado</option>
+            </select>
+            <label for="proveedor">Proveedor:</label>
+            <select id="proveedor" required>
+                <option value="Proveedor 1">Proveedor 1</option>
+                <option value="Proveedor 2">Proveedor 2</option>
+            </select>
+            <label for="imagenPrenda">Imagen de la Prenda:</label>
+            <input type="file" id="imagenPrenda" accept="image/*" required>
+            <button type="submit">Guardar Pedido</button>
+        </form>
+    </div>
+
+    <div class="pedidos-lista">
+        <h2>Lista de Pedidos</h2>
+        <table id="pedidosTable">
+            <thead>
+                <tr>
+                    <th>ID del Pedido</th>
+                    <th>Prenda</th>
+                    <th>Estado</th>
+                    <th>Proveedor</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../3. JS_S/Registro de diseños.js"></script>
+</body>
+</html>
+
+
